@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Upload Image
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content padding>
+  
+  <ion-grid>
+  <ion-row >
+    <ion-col   offset-1><div class="myimg">
+     <img src="{{pathForImage(lastImage[0])}}" (click)="presentActionSheet(0)"/>
+	 <button *ngIf="bt0" id="btn0" (click)="hide(0)" ion-button color="danger">Remove</button></div>
+     </ion-col>
+    <ion-col  ><div class="myimg">
+  <img src="{{pathForImage(lastImage[1])}}"  (click)="presentActionSheet(1)"/>
+   	 <button *ngIf="bt1"  (click)="hide(1);" ion-button color="danger">Remove</button></div>
+ </ion-col>
+	</ion-row>
+	<ion-row >
+    <ion-col offset-1><div class="myimg">
+  <img src="{{pathForImage(lastImage[2])}}"  (click)="presentActionSheet(2)"/>
+  	 <button *ngIf="bt2"  (click)="hide(2);" ion-button color="danger">Remove</button></div>
+  </ion-col>
+    <ion-col  ><div class="myimg">
+  <img src="{{pathForImage(lastImage[3])}}"  (click)="presentActionSheet(3)"/>
+  	 <button *ngIf="bt3"  (click)="hide(3);" ion-button color="danger">Remove</button></div>
+  </ion-col>
+  </ion-row>
+  <ion-row >
+    <ion-col   offset-1><div class="myimg">
+     <img src="{{pathForImage(lastImage[4])}}" (click)="presentActionSheet(4)"/>
+	 <button *ngIf="bt4" id="btn0" (click)="hide(4)" ion-button color="danger">Remove</button></div>
+     </ion-col>
+    <ion-col  ><div class="myimg">
+  <img src="{{pathForImage(lastImage[5])}}"  (click)="presentActionSheet(5)"/>
+   	 <button *ngIf="bt5"  (click)="hide(5);" ion-button color="danger">Remove</button></div>
+ </ion-col>
+	</ion-row>
+</ion-grid>
+<button ion-button icon-left (click)="suivant()" block >
+        <ion-icon name=""></ion-icon>Suivant
+      </button></ion-content>

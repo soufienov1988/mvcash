@@ -1,0 +1,41 @@
+<!--
+  Generated template for the LocalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>local</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-list radio-group [(ngModel)]="annonce.local">
+  <ion-item>
+    <ion-label>Maison</ion-label>
+    <ion-radio value="Maison" checked></ion-radio>
+  </ion-item>
+  <ion-item>
+    <ion-label>Duplex</ion-label>
+    <ion-radio value="Duplex"></ion-radio>
+  </ion-item>
+  <ion-item>
+    <ion-label>Appartement</ion-label>
+    <ion-radio value="Appartement" ></ion-radio>
+  </ion-item> 
+  <ion-item>
+    <ion-label>Cave</ion-label>
+    <ion-radio value="Cave" ></ion-radio>
+  </ion-item> 
+  <ion-item>
+    <ion-label>Autre</ion-label>
+    <ion-radio value="Autre" ></ion-radio>
+  </ion-item>
+   <ion-item><button ion-button block (click)="save()"> Ok</button></ion-item>
+
+</ion-list>
+</ion-content>

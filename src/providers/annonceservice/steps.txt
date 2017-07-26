@@ -1,0 +1,11 @@
+invert order:
+
+1- choose img
+2- set title and attributes
+
+1.1 set annonce.photos
+2.1 set attributes
+// migrate this to annonce service
+2.2 upload img
+2.3 get photos urls
+2.4 save annonces

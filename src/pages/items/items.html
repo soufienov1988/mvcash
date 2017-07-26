@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Items
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page4">
+ <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-list id="sellerHome-list2" >
+   <ion-list-header>
+   <h1> {{annonce.titre}}</h1>
+  </ion-list-header>
+   <ion-item-sliding *ngFor="let item of items">
+
+    <ion-item  >
+    <h2>  {{item.titre}}</h2>
+      <h3>
+        {{item.prix}}
+      </h3>
+	  <p>{{item.description}}</p>
+</ion-item>
+    <ion-item-options side="left">
+      <button ion-button color="primary" (click)="publishItem(item)">
+        <ion-icon name="logout"></ion-icon>
+        Publier
+      </button>
+      <button ion-button color="secondary" (click)="editItem(item)">
+        <ion-icon name="create"></ion-icon>
+        Editer
+      </button>
+      
+    </ion-item-options>
+	<ion-item-options side="right">
+      <button ion-button color="danger" (click)="removeItem(item)">
+        <ion-icon name="trash"></ion-icon>
+        Remove
+      </button>
+    </ion-item-options>
+   </ion-item-sliding>
+
+  </ion-list>
+  <button id="sellerHome-button4" ion-button color="positive" block (click)="newItem();" [hidden]="!offers">
+    Nouveau element
+  </button>
+  <ion-fab right middle>
+   <button id="sellerHome-button5" ion-fab color="positive" block (click)="newItem();" [hidden]="offers">
+   		  <ion-icon name="add-circle"></ion-icon>
+  </button></ion-fab>
+</ion-content>

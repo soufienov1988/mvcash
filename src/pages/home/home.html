@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      home
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page6">
+<h2 style="padding-left:10%;padding-right:10%;height:20%;">Bonjour  {{name}}</h2>
+  <div class="spacer" style="height:20%;" id="home-spacer2"></div>
+ <button id="login-button6" ion-button color="positive" ion-left block (click)="sell();" style="height:20%;">
+  <ion-icon name="pricetags"></ion-icon>
+   <div style="padding-left:10px"> Vendre</div>
+  </button>
+  <div class="spacer" style="height:5px;" id="home-spacer3"></div>
+  <button id="login-button7" ion-button color="positive" ion-left block (click)="buy();" style="height:20%;">
+  <ion-icon name="cart"></ion-icon>
+   <div style="padding-left:10px"> Acheter</div>
+  </button>
+</ion-content>

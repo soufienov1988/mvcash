@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Element
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page7">
+  <form id="element-form2">
+    <ion-item id="element-input6">
+      <ion-label floating>
+        Titre
+      </ion-label>
+      <ion-input type="text" placeholder="" [(ngModel)]="item.titre" name="titre"></ion-input>
+    </ion-item>
+    <ion-item id="element-input8">
+      <ion-label floating>
+        Description
+      </ion-label>
+      <ion-input type="text" placeholder=""  [(ngModel)]="item.description" name="titredesc"></ion-input>
+    </ion-item>
+    <ion-item id="element-input7">
+      <ion-label floating>
+        Prix
+      </ion-label>
+      <ion-input type="text" placeholder="€" [(ngModel)]="item.prix" name="prix"></ion-input>
+    </ion-item>
+    <ion-item id="element-select1">
+      <ion-label>
+        Categeorie
+      </ion-label>
+      <ion-select [(ngModel)]="item.categorie" name="Categeorie">
+        <ion-option value="electromenager">
+          electromenager
+        </ion-option>
+        <ion-option value="meuble">
+          meuble
+        </ion-option>
+        <ion-option value="immobilier">
+          immobilier
+        </ion-option>
+        <ion-option value="autre">
+          autre
+        </ion-option>
+      </ion-select>
+    </ion-item>
+  </form>
+  <button ion-button (click)="save()" block outline>Sauvegarder</button>
+</ion-content>

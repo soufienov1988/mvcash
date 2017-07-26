@@ -1,0 +1,31 @@
+<ion-menu [content]="content" id="menu1">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <button menuClose ion-item (click)='openPage("HomePage")'>
+       <ion-icon name="home"></ion-icon> Home
+      </button>
+	   <button menuClose ion-item (click)='openPage("SellerHomePage")'>
+       <ion-icon name="list"></ion-icon> Mes Annonces
+      </button>
+	  <button menuClose ion-item (click)='openPage("NouvelleAnnoncePage")'>
+       <ion-icon name="document"></ion-icon> Nouvelle Annonce
+      </button>
+	  <button menuClose ion-item (click)="logOut()">
+       <ion-icon name="log-out"></ion-icon> Logout
+      </button>
+	  <button menuClose ion-item (click)="changePswd()" [hidden]="normalLogin">
+       <ion-icon name="lock"></ion-icon> Mot de passe
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false" ></ion-nav>

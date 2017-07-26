@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Nouvelle annonce
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page5">
+  <form id="nouvelleAnnonce-form2" (ngSubmit)="logForm()">
+    <ion-item id="nouvelleAnnonce-input6">
+      <ion-label>
+        Titre
+      </ion-label>
+      <ion-input type="text" placeholder="" [(ngModel)]="annonce.titre" name="titre"></ion-input>
+    </ion-item>
+    <ion-item id="nouvelleAnnonce-input7">
+      <ion-label>
+        Local à vider
+      </ion-label>
+      <ion-input type="text" placeholder="" [(ngModel)]="annonce.local" name="local"></ion-input>
+    </ion-item>
+    <ion-item id="nouvelleAnnonce-input8">
+      <ion-label>
+        Catégories à vendre
+      </ion-label>
+      <ion-input type="text" placeholder="" [(ngModel)]="annonce.categorie" name="categorie"></ion-input>
+    </ion-item>
+    <ion-item id="nouvelleAnnonce-input9">
+      <ion-label>
+        Motif
+      </ion-label>
+      <ion-input type="text" placeholder="" [(ngModel)]="annonce.motif" name="motif"></ion-input>
+    </ion-item>
+    <ion-item id="nouvelleAnnonce-input10">
+      <ion-label>
+        Adresse
+      </ion-label>
+      <ion-input type="text" placeholder="" [(ngModel)]="annonce.adresse" name="adresse"></ion-input>
+    </ion-item>
+    <ion-item id="nouvelleAnnonce-input11">
+      <ion-label>
+        Accès
+      </ion-label>
+      <ion-input type="text" placeholder="" [(ngModel)]="annonce.acces" name="acces"></ion-input>
+    </ion-item>
+    <ion-item id="nouvelleAnnonce-input12">
+      <ion-label>
+        Disponibilité
+      </ion-label>
+      <ion-input type="text" placeholder="" [(ngModel)]="annonce.dispo" name="dispo"></ion-input>
+    </ion-item>
+    <ion-item id="nouvelleAnnonce-input14">
+      <ion-label>
+        Payement
+      </ion-label>
+      <ion-input type="text" placeholder="" [(ngModel)]="annonce.payement" name="payement"></ion-input>
+    </ion-item>
+    <button id="nouvelleAnnonce-button5" ion-button color="positive" block type="submit">
+      Suivant
+    </button>
+  </form>
+</ion-content>

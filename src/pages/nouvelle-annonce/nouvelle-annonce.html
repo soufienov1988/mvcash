@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Nouvelle annonce
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page5">
+  <ion-list id="nouvelleAnnonce-list3">
+    <ion-item color="none" id="nouvelleAnnonce-list-item13" (click)="goto('TitrePage');">
+      <label>Titre</label> <h3>{{annonce.titre}}</h3><p>{{annonce.titredesc}}</p>
+    </ion-item>
+    <ion-item color="none" id="nouvelleAnnonce-list-item14" (click)="goto('LocalPage');">
+     <label > Local à vider</label> <h3>{{annonce.local}}</h3>
+    </ion-item>
+    <ion-item color="none" id="nouvelleAnnonce-list-item15" (click)="goto('CategoriePage');">
+      <label >Catégories à vendre</label> 
+	  <h3>{{annonce.categorie}}</h3>
+    </ion-item>
+    <ion-item color="none" id="nouvelleAnnonce-list-item16" (click)="goto('MotifPage');">
+     <label > Motif </label>
+	 <h3>{{annonce.motif}}</h3>
+    </ion-item>
+    <ion-item color="none" id="nouvelleAnnonce-list-item17" (click)="goto('AdressePage') ;">
+     <label > Adresse</label>
+	 <h3>{{annonce.adresse}}</h3>
+    </ion-item>
+    <ion-item  id="nouvelleAnnonce-list-item18" >
+     <ion-label > Accès</ion-label><ion-input [(ngModel)]="annonce.acces"> </ion-input>
+    </ion-item>
+    <ion-item color="none" id="nouvelleAnnonce-list-item19" >
+     <ion-label > Disponibilité</ion-label> <ion-input [(ngModel)]="annonce.dispo"></ion-input>
+    </ion-item>
+    <ion-item color="none" id="nouvelleAnnonce-list-item20" (click)="goto('PayementPage') ;">
+     <label > Payement</label> <h3>{{annonce.payement}}</h3>
+    </ion-item>
+    
+  </ion-list>
+  <button id="nouvelleAnnonce-button8" ion-button color="assertive" block (click)="save();">
+    Sauvegarder
+  </button>
+</ion-content>

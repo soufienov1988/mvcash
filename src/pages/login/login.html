@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar color="primary">
+    
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page1">
+  <form id="login-form1" [formGroup]="signinForm">
+    <ion-item id="login-input3">
+      <ion-label>
+        Email
+      </ion-label>
+      <ion-input formControlName="email"  type="email" placeholder="" [(ngModel)]="email" name="email"></ion-input>
+    </ion-item>
+    <ion-item id="login-input4">
+      <ion-label>
+        Password
+      </ion-label>
+      <ion-input formControlName="password" type="password" placeholder="" [(ngModel)]="password" name="password"></ion-input>
+    </ion-item>
+	
+    <button id="login-button3" ion-button color="primary" block outline (click)="NormalLogin()">
+      Login
+    </button><ion-item><a (click)="passswd()">mot de passe oublié ?</a></ion-item>
+  </form> 
+  <div class="spacer" style="width:300px;height:10px;" id="login-spacer1"></div>
+  
+  <button id="login-button1" ion-button color="positive" ion-left block (click)="FacebookLogin()">
+  <ion-icon name="logo-facebook"></ion-icon>
+   <div style="padding-left:10px"> Facebook login</div>
+  </button>
+  
+  
+  <button id="login-button2" ion-button  color="danger" block ion-left (click)="GoogleLogin()">
+  <ion-icon name="logo-google"></ion-icon>
+   <div style="padding-left:10px">
+    Google+ login</div>
+  </button>
+  <button id="logn-button1" ion-button color="secondary" outline block (click)="signUp()">
+    Creer un compte 
+  </button>
+  
+</ion-content>

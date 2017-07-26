@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      SellerHome
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page4">
+ <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-list id="sellerHome-list2" *ngFor="let item of mesAnnonces" > 
+ 
+
+    <ion-card  >
+    <ion-card-header (click)="items( item)">  {{item.titre}}</ion-card-header>
+         <img [src]="getImage(item)" (click)="items( item)"/>
+
+	  <ion-card-content (click)="items( item)">{{item.local}}<br/>{{item.titredesc}}</ion-card-content>
+	   <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="danger" icon-start (click)="removeAnnonce(item)">
+          <ion-icon name='trash'></ion-icon>
+          Supprimer
+        </button>
+      </ion-col>
+      <ion-col text-center>
+        <button ion-button clear small color="danger" icon-start (click)="editAnnonce(item)">
+          <ion-icon name='create'></ion-icon>
+          Medifier
+        </button>
+      </ion-col>
+      <ion-col text-right>
+        <button ion-button clear small color="danger" icon-start (click)="publishAnnonce(item)">
+          <ion-icon name='share-alt'></ion-icon>
+          Publier
+        </button>
+      </ion-col>
+    </ion-row>
+</ion-card>
+   
+
+  </ion-list>
+  <p [hidden]="offers">Vous avez pas encore fait une annonce clickez sur le boutton pour creer une.</p> 
+  <button id="sellerHome-button4" ion-button color="positive" block (click)="nouvelleAnnonce();" [hidden]="offers">
+    Nouvelle annonce
+  </button>
+  <ion-fab right bottom>
+   <button id="sellerHome-button5" ion-fab color="positive" block (click)="nouvelleAnnonce();" [hidden]="!offers">
+   		  <ion-icon name="add-circle"></ion-icon>
+  </button></ion-fab>
+</ion-content>
